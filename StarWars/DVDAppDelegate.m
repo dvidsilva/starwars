@@ -17,6 +17,7 @@
 {
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds] ];
+    [self configureAppeareance];
     // creamos un modelo
     NSURL * vaderURL = [NSURL URLWithString:@"http://en.wikipedia.org/wiki/Darth_Vader"];
     NSData *vaderSound = [NSData dataWithContentsOfURL:
@@ -42,9 +43,16 @@
     
     
     //creamos el combinador
-    UITabBarController *tabVC = [ [UITabBarController alloc] init];
-    [tabVC setViewControllers: @[charVC, wikiVC]];
-    [[self window] setRootViewController:tabVC];
+    //UITabBarController *tabVC = [ [UITabBarController alloc] init];
+    //[tabVC setViewControllers: @[charVC, wikiVC]];
+    //[[self window] setRootViewController:tabVC];
+    
+    //Cambiamos el combinador por un navigacion controller
+    UINavigationController *navVC = [[UINavigationController alloc]init];
+    [navVC pushViewController:charVC
+                     animated:NO];
+    [[self window] setRootViewController:navVC];
+    
     
     //self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
@@ -78,6 +86,16 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+
+#pragma mark - utility methods
+-(void) configureAppeareance {
+    UIColor *darkblue = [UIColor colorWithRed:0
+                                        green:0 blue:0.15
+                                        alpha:1];
+    [[UINavigationBar appearance] setTintColor:darkblue];
+    [[UIToolbar appearance] setTintColor:darkblue];
 }
 
 @end

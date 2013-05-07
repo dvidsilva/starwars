@@ -7,6 +7,7 @@
 //
 
 #import "DVDCharacterViewController.h"
+#import "DVDWikiViewController.h"
 
 @implementation DVDCharacterViewController
 
@@ -23,6 +24,12 @@
 -(void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear: animated ];
     self.photoView.image = self.model.photo;
+    /* self.navigationController.navigationBar.tintColor = [UIColor
+                                                         colorWithRed:0
+                                                         green:0
+                                                         blue:0.23
+                                                         alpha:1];
+    */
     //Sincronizamos controlador y vistas
     
 }
@@ -37,5 +44,12 @@
 -(IBAction)playSound:(id)sender{
     [self.player playSoundData:self.model.soundData];
 }
+-(IBAction)displayWiki:(id)sender{
+    DVDWikiViewController *wikiVC = [[DVDWikiViewController alloc]
+                                     initWithModel:self.model];
+    [self.navigationController pushViewController:wikiVC
+                                         animated:NO];
+}
+
 
 @end
