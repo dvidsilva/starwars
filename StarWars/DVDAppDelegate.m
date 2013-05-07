@@ -25,18 +25,30 @@
     //creamos el modelo
     DVDCharacterArray *model = [DVDCharacterArray new];
     
-    //creamos el controlador //apariencia
+    //creamos el controlador de tabla//
     DVDCharactersViewController *charsVC = [[DVDCharactersViewController alloc]
                                             initWithStyle:UITableViewStylePlain
                                                     model:model];
+    //creamos un controlador de personaje //
+    DVDCharacterViewController *charVC = [[DVDCharacterViewController alloc] initWithModel:[model imperialCharacterAtIndex:0]];
+    
+    //creamos los navigations
+    UINavigationController *tableNav = [[UINavigationController alloc] init];
+    [tableNav pushViewController:charsVC animated:NO];
+    
+    UINavigationController *charNav = [[UINavigationController alloc]init];
+    [charNav pushViewController:charVC animated:NO];
     
     
-    //creamos el combinador
-    UINavigationController *navVC = [[UINavigationController alloc] init];
-    [navVC pushViewController:charsVC animated:NO];
+    UISplitViewController *splitVC = [[UISplitViewController alloc] init];
+    splitVC.viewControllers = @[tableNav, charNav];
+    splitVC.title = @"StarWars Encyclopedia";
     
+    //asignamos delegados
+    splitVC.delegate = charVC;
+
     //mostramos en pantalla
-    self.window.rootViewController = navVC;
+    self.window.rootViewController = splitVC;
     [self.window makeKeyAndVisible];
     return YES;
 }

@@ -24,12 +24,6 @@
 -(void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear: animated ];
     self.photoView.image = self.model.photo;
-    /* self.navigationController.navigationBar.tintColor = [UIColor
-                                                         colorWithRed:0
-                                                         green:0
-                                                         blue:0.23
-                                                         alpha:1];
-    */
     //Sincronizamos controlador y vistas
     
 }
@@ -49,6 +43,24 @@
                                      initWithModel:self.model];
     [self.navigationController pushViewController:wikiVC
                                          animated:NO];
+}
+
+#pragma mark - UISplitViewControllerDelegate
+
+-(void) splitViewController:(UISplitViewController *)svc
+     willHideViewController:(UIViewController *)aViewController
+          withBarButtonItem:(UIBarButtonItem *)barButtonItem
+       forPopoverController:(UIPopoverController *)pc{
+
+    self.navigationItem.leftBarButtonItem = barButtonItem;
+}
+
+
+-(void) splitViewController:(UISplitViewController *)svc
+     willShowViewController:(UIViewController *)aViewController
+  invalidatingBarButtonItem:(UIBarButtonItem *)barButtonItem{
+    
+    self.navigationItem.leftBarButtonItem = nil;
 }
 
 

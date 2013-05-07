@@ -10,7 +10,7 @@
 #import "DVDCharacterModel.h"
 #import "CafPlayer.h"
 
-@interface DVDCharacterViewController : UIViewController
+@interface DVDCharacterViewController : UIViewController<UISplitViewControllerDelegate>
 
 @property (strong, nonatomic) DVDCharacterModel *model;
 @property (weak, nonatomic) IBOutlet UIImageView *photoView;

@@ -155,7 +155,8 @@
     }else{
         charVC = [ [DVDCharacterViewController alloc] initWithModel: [self.model rebelCharacterAtIndex:indexPath.row]];
     }
-    [self.navigationController pushViewController:charVC animated:YES];
+    // [self.navigationItem pushViewController:charVC animated:YES];
+    [[self.splitViewController.viewControllers lastObject] pushViewController:charVC animated:NO];
 }
 
 @end
