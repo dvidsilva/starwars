@@ -39,6 +39,7 @@
 		CE3C05931738540300512EB6 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE3C05921738540300512EB6 /* AVFoundation.framework */; };
 		CE4DA4AB17393B0C0046B1ED /* DVDWikiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4DA4A917393B0C0046B1ED /* DVDWikiViewController.m */; };
 		CE4DA4AC17393B0C0046B1ED /* DVDWikiViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE4DA4AA17393B0C0046B1ED /* DVDWikiViewController.xib */; };
+		CE4DA4AF1739809C0046B1ED /* DVDCharacterArray.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4DA4AE1739809C0046B1ED /* DVDCharacterArray.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +83,8 @@
 		CE4DA4A817393B0C0046B1ED /* DVDWikiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVDWikiViewController.h; sourceTree = "<group>"; };
 		CE4DA4A917393B0C0046B1ED /* DVDWikiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVDWikiViewController.m; sourceTree = "<group>"; };
 		CE4DA4AA17393B0C0046B1ED /* DVDWikiViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DVDWikiViewController.xib; sourceTree = "<group>"; };
+		CE4DA4AD1739809C0046B1ED /* DVDCharacterArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVDCharacterArray.h; sourceTree = "<group>"; };
+		CE4DA4AE1739809C0046B1ED /* DVDCharacterArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVDCharacterArray.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +166,8 @@
 			children = (
 				CE3C05611738394F00512EB6 /* DVDCharacterModel.h */,
 				CE3C05621738394F00512EB6 /* DVDCharacterModel.m */,
+				CE4DA4AD1739809C0046B1ED /* DVDCharacterArray.h */,
+				CE4DA4AE1739809C0046B1ED /* DVDCharacterArray.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -310,6 +315,7 @@
 				CE3C056C1738407900512EB6 /* DVDCharacterViewController.m in Sources */,
 				CE3C059017384E3200512EB6 /* CafPlayer.m in Sources */,
 				CE4DA4AB17393B0C0046B1ED /* DVDWikiViewController.m in Sources */,
+				CE4DA4AF1739809C0046B1ED /* DVDCharacterArray.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
