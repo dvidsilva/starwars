@@ -18,6 +18,7 @@
     // when overwriting an init sending the parameters should do the same than sending or not nil for nibname and bundle, if the class was properly written
     if (self = [super initWithNibName:nil bundle:nil]) {
         _model = aModel;
+        self.title = @"Wiki";
     }
     return self;
 }

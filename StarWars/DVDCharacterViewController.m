@@ -15,6 +15,7 @@
                               bundle:nil]){
         _model = aModel;
         _player = [CafPlayer cafPlayer];
+        self.title = aModel.alias;
     }
     return self;
 }

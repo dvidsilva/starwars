@@ -34,12 +34,17 @@
                                 photo: vaderPhoto ];
     
     //Mostramos en pantalla
-    //inicializamos el view controller
-    // DVDCharacterViewController *charVC = [[DVDCharacterViewController alloc] initWithModel:vader];
+    //crea los controladores que agregaremos al combinador
+    DVDCharacterViewController *charVC = [[DVDCharacterViewController alloc] initWithModel:vader];
     DVDWikiViewController *wikiVC = [ [DVDWikiViewController alloc] initWithModel:vader ];
     //Autorelease throws an error, memory handling, retain, ARC now takes care of all that
     [[self window] setRootViewController: wikiVC ];
     
+    
+    //creamos el combinador
+    UITabBarController *tabVC = [ [UITabBarController alloc] init];
+    [tabVC setViewControllers: @[charVC, wikiVC]];
+    [[self window] setRootViewController:tabVC];
     
     //self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
