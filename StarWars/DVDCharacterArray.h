@@ -7,8 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "DVDCharacterModel.h"
 @interface DVDCharacterArray : NSObject
-@property (strong, nonatomic) NSArray *rebels;
-@property (strong, nonatomic) NSArray *imperials;
+
+@property (nonatomic, readonly) int rebelCount;
+@property (nonatomic, readonly) int imperialCount;
+
+-(DVDCharacterModel *) rebelCharacterAtIndex: (int) anIndex;
+-(DVDCharacterModel *) imperialCharacterAtIndex: (int) anIndex;
+
+
 @end

@@ -62,8 +62,8 @@
          soundData: (NSData *) aSoundData
              photo: (UIImage *) aPhoto{
     
-    return [self initWithFirstName: nil
-                          lastName: nil
+    return [self initWithFirstName: @""
+                          lastName: @""
                              alias: anAlias
                           wikiPage: aWikiPage
                          soundData: aSoundData

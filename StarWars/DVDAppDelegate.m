@@ -10,6 +10,8 @@
 #import "DVDCharacterModel.h"
 #import "DVDCharacterViewController.h"
 #import "DVDWikiViewController.h"
+#import "DVDCharacterArray.h"
+#import "DVDCharactersViewController.h"
 
 @implementation DVDAppDelegate
 
@@ -20,35 +22,21 @@
     [self configureAppeareance];
 
     
-    //Mostramos en pantalla
-    //crea los controladores que agregaremos al combinador
-    //DVDCharacterViewController *charVC = [[DVDCharacterViewController alloc] initWithModel:vader];
-    //DVDWikiViewController *wikiVC = [ [DVDWikiViewController alloc] initWithModel:vader ];
-    //Autorelease throws an error, memory handling, retain, ARC now takes care of all that
-    //[[self window] setRootViewController: wikiVC ];
+    //creamos el modelo
+    DVDCharacterArray *model = [DVDCharacterArray new];
+    
+    //creamos el controlador //apariencia
+    DVDCharactersViewController *charsVC = [[DVDCharactersViewController alloc]
+                                            initWithStyle:UITableViewStylePlain
+                                                    model:model];
     
     
     //creamos el combinador
-    //UITabBarController *tabVC = [ [UITabBarController alloc] init];
-    //[tabVC setViewControllers: @[charVC, wikiVC]];
-    //[[self window] setRootViewController:tabVC];
+    UINavigationController *navVC = [[UINavigationController alloc] init];
+    [navVC pushViewController:charsVC animated:NO];
     
-    //Cambiamos el combinador por un navigacion controller
-    /*
-    UINavigationController *navVC = [[UINavigationController alloc]init];
-    [navVC pushViewController:charVC
-                     animated:NO];
-    [[self window] setRootViewController:navVC];
-    */
-    UITabBarController *tabController = [[UITabBarController alloc] init];
-    [tabController setViewControllers:[self arrayOfControllers]];
-    
-    [[self window]setRootViewController:tabController];
-
-    
-    //self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-    // self.window.backgroundColor = [UIColor orangeColor];
+    //mostramos en pantalla
+    self.window.rootViewController = navVC;
     [self.window makeKeyAndVisible];
     return YES;
 }
@@ -86,110 +74,16 @@
     UIColor *darkblue = [UIColor colorWithRed:0
                                         green:0 blue:0.15
                                         alpha:1];
+    UIColor *darkerblue = [UIColor colorWithRed:0
+                                        green:0 blue:0.04
+                                        alpha:1];
+    
     [[UINavigationBar appearance] setTintColor:darkblue];
+    
     [[UIToolbar appearance] setTintColor:darkblue];
+    
+    [[UITableViewHeaderFooterView appearance] setTintColor:darkerblue];
 }
 
--(NSArray *) arrayOfModels{
-    // creamos un modelo // Darth Vader
-    NSURL * vaderURL = [NSURL URLWithString:@"http://en.wikipedia.org/wiki/Darth_Vader"];
-    NSData *vaderSound = [NSData dataWithContentsOfURL:
-                          [ [NSBundle mainBundle] URLForResource:@"vader" withExtension:@"caf"]
-                          ];
-    
-    UIImage *vaderPhoto = [UIImage imageNamed:@"darthVader.jpg"];
-    
-    DVDCharacterModel *vader = [DVDCharacterModel
-                                characterModelWithFirstName: @"Anakin"
-                                lastName: @"Skywalker"
-                                alias: @"Darth Vader"
-                                wikiPage: vaderURL
-                                soundData: vaderSound
-                                photo: vaderPhoto ];
-    //C3-PO
-    NSURL * c3poURL = [NSURL URLWithString:@"http://en.wikipedia.org/wiki/C-3PO"];
-    NSData *c3poSound = [NSData dataWithContentsOfURL:
-                          [ [NSBundle mainBundle] URLForResource:@"c3po" withExtension:@"caf"]
-                          ];
-    UIImage *c3poPhoto = [UIImage imageNamed:@"c3po"];
-    DVDCharacterModel *c3po = [DVDCharacterModel
-                                characterModelWithAlias: @"C-3PO"
-                                wikiPage: c3poURL
-                                soundData: c3poSound
-                                photo: c3poPhoto ];
-   
-    //Chewbacca
-    NSURL * chewbaccaURL = [NSURL URLWithString:@"http://en.wikipedia.org/wiki/Chewbacca"];
-    NSData *chewbaccaSound = [NSData dataWithContentsOfURL:
-                         [ [NSBundle mainBundle] URLForResource:@"chewbacca" withExtension:@"caf"]
-                         ];
-    UIImage *chewbaccaPhoto = [UIImage imageNamed:@"chewbacca"];
-    DVDCharacterModel *chewbacca = [DVDCharacterModel
-                               characterModelWithAlias: @"Chewbacca"
-                               wikiPage: chewbaccaURL
-                               soundData: chewbaccaSound
-                               photo: chewbaccaPhoto ];
-
-    //Palpatine
-    NSURL * palpatineURL = [NSURL URLWithString:@"http://en.wikipedia.org/wiki/Palpatine"];
-    NSData *palpatineSound = [NSData dataWithContentsOfURL:
-                              [ [NSBundle mainBundle] URLForResource:@"palpatine" withExtension:@"caf"]
-                              ];
-    UIImage *palpatinePhoto = [UIImage imageNamed:@"palpatine"];
-    DVDCharacterModel *palpatine = [DVDCharacterModel
-                                    characterModelWithFirstName: nil
-                                    lastName: @"Palpatine"
-                                    alias: @"Darth Sidious"
-                                    wikiPage: palpatineURL
-                                    soundData: palpatineSound
-                                    photo: palpatinePhoto ];
-  
-    //R2D2
-    NSURL *r2d2URL = [NSURL URLWithString:@"http://en.wikipedia.org/wiki/R2-D2"];
-    NSData *r2d2Sound = [NSData dataWithContentsOfURL:
-                              [ [NSBundle mainBundle] URLForResource:@"rd-d2" withExtension:@"caf"]
-                              ];
-    UIImage *r2d2Photo = [UIImage imageNamed:@"R2-D2"];
-    DVDCharacterModel *r2d2 = [DVDCharacterModel
-                                    characterModelWithFirstName: nil
-                                    lastName: @"Palpatine"
-                                    alias: @"Darth Sidious"
-                                    wikiPage: r2d2URL
-                                    soundData: r2d2Sound
-                                    photo: r2d2Photo ];
-  
-    //Yoda
-    NSURL *yodaURL = [NSURL URLWithString:@"http://en.wikipedia.org/wiki/Yoda"];
-    NSData *yodaSound = [NSData dataWithContentsOfURL:
-                         [ [NSBundle mainBundle] URLForResource:@"yoda" withExtension:@"caf"]
-                         ];
-    UIImage *yodaPhoto = [UIImage imageNamed:@"yoda"];
-    DVDCharacterModel *yoda = [DVDCharacterModel
-                               characterModelWithFirstName: @"Minch"
-                               lastName: @"Yoda"
-                               alias: @"Master Yoda"
-                               wikiPage: yodaURL
-                               soundData: yodaSound
-                               photo: yodaPhoto ];
-    
-    return @[vader, chewbacca, palpatine, r2d2, yoda, c3po];
-}
-
--(NSArray *) arrayOfControllers{
-    NSArray *models = [self arrayOfModels];
-    NSMutableArray *controllers = [NSMutableArray arrayWithCapacity:[models count]];
-    
-    //iterate over each model and create a controller for each
-    for(DVDCharacterModel *model in models){
-        UINavigationController *navC = [[UINavigationController alloc] init];
-        DVDCharacterViewController *charVC = [[DVDCharacterViewController alloc] initWithModel:model] ;
-        [navC pushViewController:charVC animated:NO];
-        
-        // added to the array of controllers
-        [controllers addObject:navC];
-    }
-    
-    return controllers;
-}
 
 @end
