@@ -7,14 +7,43 @@
 //
 
 #import "DVDAppDelegate.h"
+#import "DVDCharacterModel.h"
+#import "DVDCharacterViewController.h"
+#import "DVDWikiViewController.h"
 
 @implementation DVDAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds] ];
+    // creamos un modelo
+    NSURL * vaderURL = [NSURL URLWithString:@"http://en.wikipedia.org/wiki/Darth_Vader"];
+    NSData *vaderSound = [NSData dataWithContentsOfURL:
+                          [ [NSBundle mainBundle] URLForResource:@"vader" withExtension:@"caf"]
+                          ];
+    
+    UIImage *vaderPhoto = [UIImage imageNamed:@"darthVader.jpg"];
+    
+    DVDCharacterModel *vader = [DVDCharacterModel
+                                characterModelWithFirstName: @"Anakin"
+                                lastName: @"Skywalker"
+                                alias: @"Darth Vader"
+                                wikiPage: vaderURL
+                                soundData: vaderSound
+                                photo: vaderPhoto ];
+    
+    //Mostramos en pantalla
+    //inicializamos el view controller
+    // DVDCharacterViewController *charVC = [[DVDCharacterViewController alloc] initWithModel:vader];
+    DVDWikiViewController *wikiVC = [ [DVDWikiViewController alloc] initWithModel:vader ];
+    //Autorelease throws an error, memory handling, retain, ARC now takes care of all that
+    [[self window] setRootViewController: wikiVC ];
+    
+    
+    //self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
+    // self.window.backgroundColor = [UIColor orangeColor];
     [self.window makeKeyAndVisible];
     return YES;
 }

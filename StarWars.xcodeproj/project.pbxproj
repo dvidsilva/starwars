@@ -16,6 +16,29 @@
 		CE2CFC091738302E0050CCBE /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = CE2CFC081738302E0050CCBE /* Default.png */; };
 		CE2CFC0B1738302E0050CCBE /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE2CFC0A1738302E0050CCBE /* Default@2x.png */; };
 		CE2CFC0D1738302E0050CCBE /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE2CFC0C1738302E0050CCBE /* Default-568h@2x.png */; };
+		CE3C05631738394F00512EB6 /* DVDCharacterModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3C05621738394F00512EB6 /* DVDCharacterModel.m */; };
+		CE3C056C1738407900512EB6 /* DVDCharacterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3C056A1738407900512EB6 /* DVDCharacterViewController.m */; };
+		CE3C056D1738407900512EB6 /* DVDCharacterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE3C056B1738407900512EB6 /* DVDCharacterViewController.xib */; };
+		CE3C057517384D2100512EB6 /* c3po.caf in Resources */ = {isa = PBXBuildFile; fileRef = CE3C056E17384D2100512EB6 /* c3po.caf */; };
+		CE3C057617384D2100512EB6 /* chewbacca.caf in Resources */ = {isa = PBXBuildFile; fileRef = CE3C056F17384D2100512EB6 /* chewbacca.caf */; };
+		CE3C057717384D2100512EB6 /* palpatine.caf in Resources */ = {isa = PBXBuildFile; fileRef = CE3C057017384D2100512EB6 /* palpatine.caf */; };
+		CE3C057817384D2100512EB6 /* r2-d2.caf in Resources */ = {isa = PBXBuildFile; fileRef = CE3C057117384D2100512EB6 /* r2-d2.caf */; };
+		CE3C057917384D2100512EB6 /* tarkin.caf in Resources */ = {isa = PBXBuildFile; fileRef = CE3C057217384D2100512EB6 /* tarkin.caf */; };
+		CE3C057A17384D2100512EB6 /* vader.caf in Resources */ = {isa = PBXBuildFile; fileRef = CE3C057317384D2100512EB6 /* vader.caf */; };
+		CE3C057B17384D2100512EB6 /* yoda.caf in Resources */ = {isa = PBXBuildFile; fileRef = CE3C057417384D2100512EB6 /* yoda.caf */; };
+		CE3C058317384DA800512EB6 /* R2-D2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE3C057C17384DA800512EB6 /* R2-D2.jpg */; };
+		CE3C058417384DA800512EB6 /* tarkin.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE3C057D17384DA800512EB6 /* tarkin.jpg */; };
+		CE3C058517384DA800512EB6 /* chewbacca.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE3C057E17384DA800512EB6 /* chewbacca.jpg */; };
+		CE3C058617384DA800512EB6 /* c3po.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE3C057F17384DA800512EB6 /* c3po.jpg */; };
+		CE3C058717384DA800512EB6 /* palpatine.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE3C058017384DA800512EB6 /* palpatine.jpg */; };
+		CE3C058817384DA800512EB6 /* yoda.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE3C058117384DA800512EB6 /* yoda.jpg */; };
+		CE3C058917384DA800512EB6 /* darthVader.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE3C058217384DA800512EB6 /* darthVader.jpg */; };
+		CE3C058B17384DE800512EB6 /* iconSmall.png in Resources */ = {isa = PBXBuildFile; fileRef = CE3C058A17384DE800512EB6 /* iconSmall.png */; };
+		CE3C058D17384DEB00512EB6 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = CE3C058C17384DEB00512EB6 /* icon.png */; };
+		CE3C059017384E3200512EB6 /* CafPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3C058E17384E3200512EB6 /* CafPlayer.m */; };
+		CE3C05931738540300512EB6 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE3C05921738540300512EB6 /* AVFoundation.framework */; };
+		CE4DA4AB17393B0C0046B1ED /* DVDWikiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4DA4A917393B0C0046B1ED /* DVDWikiViewController.m */; };
+		CE4DA4AC17393B0C0046B1ED /* DVDWikiViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE4DA4AA17393B0C0046B1ED /* DVDWikiViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +55,33 @@
 		CE2CFC081738302E0050CCBE /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		CE2CFC0A1738302E0050CCBE /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		CE2CFC0C1738302E0050CCBE /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		CE3C05611738394F00512EB6 /* DVDCharacterModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVDCharacterModel.h; sourceTree = "<group>"; };
+		CE3C05621738394F00512EB6 /* DVDCharacterModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVDCharacterModel.m; sourceTree = "<group>"; };
+		CE3C05691738407900512EB6 /* DVDCharacterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVDCharacterViewController.h; sourceTree = "<group>"; };
+		CE3C056A1738407900512EB6 /* DVDCharacterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVDCharacterViewController.m; sourceTree = "<group>"; };
+		CE3C056B1738407900512EB6 /* DVDCharacterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DVDCharacterViewController.xib; sourceTree = "<group>"; };
+		CE3C056E17384D2100512EB6 /* c3po.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = c3po.caf; path = resources/c3po.caf; sourceTree = "<group>"; };
+		CE3C056F17384D2100512EB6 /* chewbacca.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = chewbacca.caf; path = resources/chewbacca.caf; sourceTree = "<group>"; };
+		CE3C057017384D2100512EB6 /* palpatine.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = palpatine.caf; path = resources/palpatine.caf; sourceTree = "<group>"; };
+		CE3C057117384D2100512EB6 /* r2-d2.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "r2-d2.caf"; path = "resources/r2-d2.caf"; sourceTree = "<group>"; };
+		CE3C057217384D2100512EB6 /* tarkin.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = tarkin.caf; path = resources/tarkin.caf; sourceTree = "<group>"; };
+		CE3C057317384D2100512EB6 /* vader.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = vader.caf; path = resources/vader.caf; sourceTree = "<group>"; };
+		CE3C057417384D2100512EB6 /* yoda.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = yoda.caf; path = resources/yoda.caf; sourceTree = "<group>"; };
+		CE3C057C17384DA800512EB6 /* R2-D2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "R2-D2.jpg"; path = "resources/R2-D2.jpg"; sourceTree = "<group>"; };
+		CE3C057D17384DA800512EB6 /* tarkin.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = tarkin.jpg; path = resources/tarkin.jpg; sourceTree = "<group>"; };
+		CE3C057E17384DA800512EB6 /* chewbacca.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = chewbacca.jpg; path = resources/chewbacca.jpg; sourceTree = "<group>"; };
+		CE3C057F17384DA800512EB6 /* c3po.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = c3po.jpg; path = resources/c3po.jpg; sourceTree = "<group>"; };
+		CE3C058017384DA800512EB6 /* palpatine.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = palpatine.jpg; path = resources/palpatine.jpg; sourceTree = "<group>"; };
+		CE3C058117384DA800512EB6 /* yoda.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = yoda.jpg; path = resources/yoda.jpg; sourceTree = "<group>"; };
+		CE3C058217384DA800512EB6 /* darthVader.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = darthVader.jpg; path = resources/darthVader.jpg; sourceTree = "<group>"; };
+		CE3C058A17384DE800512EB6 /* iconSmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconSmall.png; sourceTree = "<group>"; };
+		CE3C058C17384DEB00512EB6 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		CE3C058E17384E3200512EB6 /* CafPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CafPlayer.m; sourceTree = "<group>"; };
+		CE3C058F17384E3200512EB6 /* CafPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CafPlayer.h; sourceTree = "<group>"; };
+		CE3C05921738540300512EB6 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		CE4DA4A817393B0C0046B1ED /* DVDWikiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVDWikiViewController.h; sourceTree = "<group>"; };
+		CE4DA4A917393B0C0046B1ED /* DVDWikiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVDWikiViewController.m; sourceTree = "<group>"; };
+		CE4DA4AA17393B0C0046B1ED /* DVDWikiViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DVDWikiViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE3C05931738540300512EB6 /* AVFoundation.framework in Frameworks */,
 				CE2CFBF71738302E0050CCBE /* UIKit.framework in Frameworks */,
 				CE2CFBF91738302E0050CCBE /* Foundation.framework in Frameworks */,
 				CE2CFBFB1738302E0050CCBE /* CoreGraphics.framework in Frameworks */,
@@ -51,6 +102,8 @@
 		CE2CFBEA1738302E0050CCBE = {
 			isa = PBXGroup;
 			children = (
+				CE3C058C17384DEB00512EB6 /* icon.png */,
+				CE3C058A17384DE800512EB6 /* iconSmall.png */,
 				CE2CFBFC1738302E0050CCBE /* StarWars */,
 				CE2CFBF51738302E0050CCBE /* Frameworks */,
 				CE2CFBF41738302E0050CCBE /* Products */,
@@ -68,6 +121,7 @@
 		CE2CFBF51738302E0050CCBE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CE3C05921738540300512EB6 /* AVFoundation.framework */,
 				CE2CFBF61738302E0050CCBE /* UIKit.framework */,
 				CE2CFBF81738302E0050CCBE /* Foundation.framework */,
 				CE2CFBFA1738302E0050CCBE /* CoreGraphics.framework */,
@@ -78,8 +132,13 @@
 		CE2CFBFC1738302E0050CCBE /* StarWars */ = {
 			isa = PBXGroup;
 			children = (
+				CE3C05911738502100512EB6 /* Sounds */,
+				CE3C0594173856FB00512EB6 /* Images */,
+				CE4DA4A717393AB80046B1ED /* Player */,
 				CE2CFC051738302E0050CCBE /* DVDAppDelegate.h */,
 				CE2CFC061738302E0050CCBE /* DVDAppDelegate.m */,
+				CE3C05681738403F00512EB6 /* Controllers */,
+				CE3C05641738396400512EB6 /* Models */,
 				CE2CFBFD1738302E0050CCBE /* Supporting Files */,
 			);
 			path = StarWars;
@@ -97,6 +156,68 @@
 				CE2CFC0C1738302E0050CCBE /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CE3C05641738396400512EB6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CE3C05611738394F00512EB6 /* DVDCharacterModel.h */,
+				CE3C05621738394F00512EB6 /* DVDCharacterModel.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		CE3C05681738403F00512EB6 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CE3C05691738407900512EB6 /* DVDCharacterViewController.h */,
+				CE3C056A1738407900512EB6 /* DVDCharacterViewController.m */,
+				CE3C056B1738407900512EB6 /* DVDCharacterViewController.xib */,
+				CE4DA4A817393B0C0046B1ED /* DVDWikiViewController.h */,
+				CE4DA4A917393B0C0046B1ED /* DVDWikiViewController.m */,
+				CE4DA4AA17393B0C0046B1ED /* DVDWikiViewController.xib */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		CE3C05911738502100512EB6 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				CE3C056E17384D2100512EB6 /* c3po.caf */,
+				CE3C056F17384D2100512EB6 /* chewbacca.caf */,
+				CE3C057017384D2100512EB6 /* palpatine.caf */,
+				CE3C057117384D2100512EB6 /* r2-d2.caf */,
+				CE3C057217384D2100512EB6 /* tarkin.caf */,
+				CE3C057317384D2100512EB6 /* vader.caf */,
+				CE3C057417384D2100512EB6 /* yoda.caf */,
+			);
+			name = Sounds;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		CE3C0594173856FB00512EB6 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				CE3C057C17384DA800512EB6 /* R2-D2.jpg */,
+				CE3C057D17384DA800512EB6 /* tarkin.jpg */,
+				CE3C057E17384DA800512EB6 /* chewbacca.jpg */,
+				CE3C057F17384DA800512EB6 /* c3po.jpg */,
+				CE3C058017384DA800512EB6 /* palpatine.jpg */,
+				CE3C058117384DA800512EB6 /* yoda.jpg */,
+				CE3C058217384DA800512EB6 /* darthVader.jpg */,
+			);
+			name = Images;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		CE4DA4A717393AB80046B1ED /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				CE3C058E17384E3200512EB6 /* CafPlayer.m */,
+				CE3C058F17384E3200512EB6 /* CafPlayer.h */,
+			);
+			name = Player;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,6 +276,24 @@
 				CE2CFC091738302E0050CCBE /* Default.png in Resources */,
 				CE2CFC0B1738302E0050CCBE /* Default@2x.png in Resources */,
 				CE2CFC0D1738302E0050CCBE /* Default-568h@2x.png in Resources */,
+				CE3C056D1738407900512EB6 /* DVDCharacterViewController.xib in Resources */,
+				CE3C057517384D2100512EB6 /* c3po.caf in Resources */,
+				CE3C057617384D2100512EB6 /* chewbacca.caf in Resources */,
+				CE3C057717384D2100512EB6 /* palpatine.caf in Resources */,
+				CE3C057817384D2100512EB6 /* r2-d2.caf in Resources */,
+				CE3C057917384D2100512EB6 /* tarkin.caf in Resources */,
+				CE3C057A17384D2100512EB6 /* vader.caf in Resources */,
+				CE3C057B17384D2100512EB6 /* yoda.caf in Resources */,
+				CE3C058317384DA800512EB6 /* R2-D2.jpg in Resources */,
+				CE3C058417384DA800512EB6 /* tarkin.jpg in Resources */,
+				CE3C058517384DA800512EB6 /* chewbacca.jpg in Resources */,
+				CE3C058617384DA800512EB6 /* c3po.jpg in Resources */,
+				CE3C058717384DA800512EB6 /* palpatine.jpg in Resources */,
+				CE3C058817384DA800512EB6 /* yoda.jpg in Resources */,
+				CE3C058917384DA800512EB6 /* darthVader.jpg in Resources */,
+				CE3C058B17384DE800512EB6 /* iconSmall.png in Resources */,
+				CE3C058D17384DEB00512EB6 /* icon.png in Resources */,
+				CE4DA4AC17393B0C0046B1ED /* DVDWikiViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,6 +306,10 @@
 			files = (
 				CE2CFC031738302E0050CCBE /* main.m in Sources */,
 				CE2CFC071738302E0050CCBE /* DVDAppDelegate.m in Sources */,
+				CE3C05631738394F00512EB6 /* DVDCharacterModel.m in Sources */,
+				CE3C056C1738407900512EB6 /* DVDCharacterViewController.m in Sources */,
+				CE3C059017384E3200512EB6 /* CafPlayer.m in Sources */,
+				CE4DA4AB17393B0C0046B1ED /* DVDWikiViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +426,7 @@
 				CE2CFC121738302E0050CCBE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
