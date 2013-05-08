@@ -8,12 +8,30 @@
 
 #import <UIKit/UIKit.h>
 #import "DVDCharacterArray.h"
+#import "DVDCharacterViewController.h"
+
 
 #define IMPERIAL_SECTION 0
 #define REBEL_SECTION 1
 
+#define CHARACTER_DID_CHANGE_NOTIFICATION @"characterDidChangeNotification"
+#define CHARACTER_KEY @"CharacterKey"
+
+
+@class  DVDCharactersViewController;
+
+@protocol  DVDCharactersViewControllerDelegate <NSObject>
+@optional
+-(void)charactersViewController: (DVDCharactersViewController *)vc
+                      didSelectCharacter:(DVDCharacterModel *)aCharacter;
+
+
+@end
+
 
 @interface DVDCharactersViewController : UITableViewController
+
+@property (weak, nonatomic) id delegate;
 -(id) initWithStyle:(UITableViewStyle)aStyle
               model:(DVDCharacterArray *) aModel;
 

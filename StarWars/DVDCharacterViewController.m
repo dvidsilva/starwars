@@ -22,10 +22,8 @@
 }
 
 -(void) viewWillAppear:(BOOL)animated {
-    [super viewWillAppear: animated ];
-    self.photoView.image = self.model.photo;
+    [self syncViewWithModel];
     //Sincronizamos controlador y vistas
-    
 }
 
 -(void)didReceiveMemoryWarning{
@@ -63,5 +61,21 @@
     self.navigationItem.leftBarButtonItem = nil;
 }
 
+#pragma mark - DVDCharactersViewControllerDelegate
 
+-(void)charactersViewController:(DVDCharactersViewController *)vc
+             didSelectCharacter:(DVDCharacterModel *)aCharacter{
+    //tu modelo cambio, actualiza la info
+    self.model = aCharacter;
+    //muestra la nueva info
+    [self syncViewWithModel];
+    //[self.navigationController popToRootViewControllerAnimated:YES];
+}
+
+#pragma  mark - Utils
+
+-(void)syncViewWithModel {
+    self.photoView.image = self.model.photo;
+    self.title = self.model.alias;
+}
 @end

@@ -42,6 +42,7 @@
 						<string key="NSFrameSize">{768, 1004}</string>
 						<reference key="NSSuperview" ref="766721923"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="343459365"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<object class="NSColor" key="IBUIBackgroundColor">
 							<int key="NSColorSpace">1</int>
@@ -53,14 +54,15 @@
 					</object>
 					<object class="IBUIActivityIndicatorView" id="343459365">
 						<reference key="NSNextResponder" ref="766721923"/>
-						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{366, 483}, {37, 37}}</string>
+						<int key="NSvFlags">301</int>
+						<string key="NSFrame">{{365, 484}, {37, 37}}</string>
 						<reference key="NSSuperview" ref="766721923"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
-						<bool key="IBUIAnimating">YES</bool>
+						<bool key="IBUIHidesWhenStopped">NO</bool>
 						<int key="IBUIStyle">0</int>
 						<object class="NSColor" key="IBUIColor">
 							<int key="NSColorSpace">1</int>

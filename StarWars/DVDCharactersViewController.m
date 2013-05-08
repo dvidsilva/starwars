@@ -5,10 +5,11 @@
 //  Created by Dvid Silva on 5/7/13.
 //  Copyright (c) 2013 Dvid Silva. All rights reserved.
 //
+//Always import in .m, if you need a class in .h use @class
 
 #import "DVDCharactersViewController.h"
-#import "DVDCharacterArray.h"
-#import "DVDCharacterViewController.h"
+
+
 
 @interface DVDCharactersViewController ()
 @property (strong, nonatomic) DVDCharacterArray *model;
@@ -144,19 +145,30 @@
 }
 */
 
+#import "DVDCharactersViewController.h"
+
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    DVDCharacterViewController *charVC = nil;
-    
+    DVDCharacterModel *charVC = nil;
+    //Averiguamos que personaje fue clickeado encima
     if(indexPath.section == IMPERIAL_SECTION){
-        charVC = [ [DVDCharacterViewController alloc] initWithModel: [self.model imperialCharacterAtIndex:indexPath.row]];
+        charVC = [self.model imperialCharacterAtIndex:indexPath.row];
     }else{
-        charVC = [ [DVDCharacterViewController alloc] initWithModel: [self.model rebelCharacterAtIndex:indexPath.row]];
+        charVC = [self.model rebelCharacterAtIndex:indexPath.row];
     }
-    // [self.navigationItem pushViewController:charVC animated:YES];
-    [[self.splitViewController.viewControllers lastObject] pushViewController:charVC animated:NO];
+    //Nos aseguramos que el delegate puede responder a este mensaje, if it doesn't it will throw a nasty error, specially important when a delegate is added, so it won't be necesary to implement all listening methods
+    if([self.delegate respondsToSelector:@selector(charactersViewController:didSelectCharacter:)]){
+        //Avisamos al delegado que hubo un evento, clickearon en un personaje
+        [self.delegate charactersViewController:self
+                             didSelectCharacter:charVC];
+    }
+    // enviamos la notificación a través del notification center
+    NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
+    NSNotification *notification = [NSNotification notificationWithName:CHARACTER_DID_CHANGE_NOTIFICATION object:self userInfo:@{CHARACTER_KEY:charVC}];
+    [nc postNotification:notification];
 }
+
 
 @end

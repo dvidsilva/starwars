@@ -7,6 +7,8 @@
 //
 
 #import "DVDWikiViewController.h"
+#import "DVDCharacterArray.h"
+#import "DVDCharactersViewController.h"
 
 @interface DVDWikiViewController ()
 
@@ -23,11 +25,47 @@
     return self;
 }
 
+#pragma  mark - Begin listen to notification
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    // nos damos de alta en las notificaciones
+    NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
+    [nc addObserver:self
+           selector:@selector(characterDidChange:)
+               name:CHARACTER_DID_CHANGE_NOTIFICATION
+             object:nil
+     ];
+    
+    
+    //asignamos delegado
     [[self browser] setDelegate:self];
+    
+    //sincronizamos vista y modelo
+    [self syncWithViewModel];
+}
+-(void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+#pragma  mark - Utils
+//sincronizar vista y modelo
+-(void)syncWithViewModel {
+    [self.activityView setHidden:NO];
+    [self.activityView startAnimating];
     [self.browser loadRequest:[NSURLRequest
-                               requestWithURL: [[self model] wikiPage] ] ];
+                               requestWithURL:[[self model] wikiPage]]];
+}
+-(void)characterDidChange:(NSNotification *)notification{
+    //Extraer el user info
+    NSDictionary *info = [notification userInfo];
+    //averiguar que personaje es
+    DVDCharacterModel *character = [info objectForKey:CHARACTER_KEY];
+    //actualizar el modelo
+    self.model = character;
+    //sincronizar las vistas
+    [self syncWithViewModel];
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -38,6 +76,7 @@
 
 #pragma  mark - UiWebView delegate
 -(void)webViewDidFinishLoad:(UIWebView *)webView{
+    [self.activityView setHidden:YES];
     [self.activityView stopAnimating];
 }
 

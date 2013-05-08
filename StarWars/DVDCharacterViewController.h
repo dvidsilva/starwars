@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "DVDCharacterModel.h"
 #import "CafPlayer.h"
+#import "DVDCharactersViewController.h"
 
 @interface DVDCharacterViewController : UIViewController<UISplitViewControllerDelegate>
 
