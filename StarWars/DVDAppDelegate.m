@@ -20,14 +20,26 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds] ];
     [self configureAppeareance];
-
+    [self setDefaults];
     
-
+    
     
     if( [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad ){
         
-        //creamos el modelo
+        //leemos la persistencia
+        NSUserDefaults *def = [NSUserDefaults standardUserDefaults];
+        NSDictionary *coords = [def objectForKey:LAST_SELECTED_CHARACTER];
+        //obtenemos el ultimo
+        int section = [[coords objectForKey:SECTION_KEY] intValue];
+        int row = [[coords objectForKey:ROW_KEY] intValue];
+        DVDCharacterModel *character = nil;
         DVDCharacterArray *model = [DVDCharacterArray new];
+        
+        if(section == IMPERIAL_SECTION){
+            character = [model imperialCharacterAtIndex:row];
+        }else{
+            character = [model rebelCharacterAtIndex:row];
+        }
         
         //creamos el controlador de tabla//
         DVDCharactersViewController *charsVC = [[DVDCharactersViewController alloc]
@@ -124,6 +136,25 @@
     [[UIToolbar appearance] setTintColor:darkblue];
     
     [[UITableViewHeaderFooterView appearance] setTintColor:darkerblue];
+}
+
+-(void)setDefaults {
+    NSUserDefaults *defaults =  [NSUserDefaults standardUserDefaults];
+    
+    if ( [ defaults objectForKey:LAST_SELECTED_CHARACTER] == nil){
+        
+        //la aplicación no habia sido llamada antes, guardamos un valor por defecto
+        NSDictionary *coords = @{SECTION_KEY: @(IMPERIAL_SECTION), ROW_KEY:@0 };
+        // @() transformar de 'numero' a NSNumber type, cast
+        [ defaults setObject:coords
+                      forKey:LAST_SELECTED_CHARACTER];
+        [defaults synchronize];
+        
+    }else{
+        
+        
+        
+    }
 }
 
 

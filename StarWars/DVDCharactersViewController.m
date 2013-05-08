@@ -153,6 +153,8 @@
 {
     DVDCharacterModel *charVC = nil;
     //Averiguamos que personaje fue clickeado encima
+    //guardamos el ultimo personaje seleccionado
+    [self saveLastSelectedCharacter:indexPath];
     if(indexPath.section == IMPERIAL_SECTION){
         charVC = [self.model imperialCharacterAtIndex:indexPath.row];
     }else{
@@ -169,7 +171,17 @@
     NSNotification *notification = [NSNotification notificationWithName:CHARACTER_DID_CHANGE_NOTIFICATION object:self userInfo:@{CHARACTER_KEY:charVC}];
     [nc postNotification:notification];
 }
-
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:NO];
+    NSUserDefaults *def = [[NSUserDefaults standardUserDefaults ]objectForKey:LAST_SELECTED_CHARACTER];
+    NSIndexPath *coordIP = [NSIndexPath indexPathForRow:  [[def objectForKey:ROW_KEY ] intValue]
+                            
+                                              inSection:  [[def objectForKey:SECTION_KEY] intValue]
+                            ];
+    [self.tableView selectRowAtIndexPath:coordIP
+                                animated:NO
+                          scrollPosition:NAN];
+}
 
 #pragma mark - delegado de self
 //@protocol  DVDCharactersViewControllerDelegate <NSObject>
@@ -181,6 +193,16 @@
     
     [self.navigationController pushViewController:charVC animated:YES];
 }
+#pragma mark - utilities
 
+-(void)saveLastSelectedCharacter:(NSIndexPath *)indexPath{
+    NSUserDefaults *def = [NSUserDefaults standardUserDefaults];
+    [def setObject:
+     @{SECTION_KEY: @(indexPath.section),
+           ROW_KEY: @(indexPath.row)}
+            forKey:LAST_SELECTED_CHARACTER];
+    //OJO! sin sincronizar puede que no guarde en el disco
+    [def synchronize];
+}
 
 @end

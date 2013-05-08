@@ -57,6 +57,7 @@
 		CE2CFC081738302E0050CCBE /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		CE2CFC0A1738302E0050CCBE /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		CE2CFC0C1738302E0050CCBE /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		CE33E5FB173AD79F00B7E467 /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
 		CE3C05611738394F00512EB6 /* DVDCharacterModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVDCharacterModel.h; sourceTree = "<group>"; };
 		CE3C05621738394F00512EB6 /* DVDCharacterModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVDCharacterModel.m; sourceTree = "<group>"; };
 		CE3C05691738407900512EB6 /* DVDCharacterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVDCharacterViewController.h; sourceTree = "<group>"; };
@@ -146,6 +147,7 @@
 				CE3C05681738403F00512EB6 /* Controllers */,
 				CE3C05641738396400512EB6 /* Models */,
 				CE2CFBFD1738302E0050CCBE /* Supporting Files */,
+				CE33E5FB173AD79F00B7E467 /* Settings.h */,
 			);
 			path = StarWars;
 			sourceTree = "<group>";
