@@ -29,7 +29,7 @@
 @end
 
 
-@interface DVDCharactersViewController : UITableViewController
+@interface DVDCharactersViewController : UITableViewController<DVDCharactersViewControllerDelegate>
 
 @property (weak, nonatomic) id delegate;
 -(id) initWithStyle:(UITableViewStyle)aStyle

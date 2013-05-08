@@ -171,4 +171,16 @@
 }
 
 
+#pragma mark - delegado de self
+//@protocol  DVDCharactersViewControllerDelegate <NSObject>
+-(void) charactersViewController:(DVDCharactersViewController *)vc
+              didSelectCharacter:(DVDCharacterModel *)aCharacter{
+    // crear un character VC con el index del que clickearon y pushiarlo
+    DVDCharacterViewController *charVC = [[DVDCharacterViewController alloc]
+                                          initWithModel:aCharacter];
+    
+    [self.navigationController pushViewController:charVC animated:YES];
+}
+
+
 @end
